@@ -1,0 +1,27 @@
+@import 'normalize';
+@import '../bower_components/susy/sass/susy';
+@import 'variables';
+
+body {
+	font-family: $base-font;
+}
+
+.container {
+	@include container(24 center);
+	max-width: 800px;
+}
+
+.form-element {
+	@include span(11 of 24);
+	margin-bottom: 1em;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
