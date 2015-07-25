@@ -6,18 +6,18 @@ import Immutable from 'immutable';
 riot.tag(
 	'result-report',
 	`
-	<table>
-		<tr>
+	<table class="result-table">
+		<tr class="result-table-heading">
 			<th>Name</th>
 			<th>Per meal</th>
 			<th>Per day</th>
 		</tr>
-		<tr each="{food in opts.foods.toJS()}">
+		<tr class="result-table-sub-results" each="{food in opts.foods.toJS()}">
 			<td>{food.foodType}</td>
 			<td>{foodUtils.calcWeightPerDay(food.weight, food.panWeight)}</td>
 			<td>{foodUtils.calcWeightPerMeal(food.weight, food.panWeight)}</td>
 		</tr>
-		<tr>
+		<tr class="result-table-total-results" class="total">
 			<td>Total</td>
 			<td>{foodUtils.calcWeightPerDay(totalWeight, totalPanWeight)}</td>
 			<td>{foodUtils.calcWeightPerMeal(totalWeight, totalPanWeight)}</td>

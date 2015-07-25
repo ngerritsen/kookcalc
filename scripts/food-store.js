@@ -17,8 +17,8 @@ export default class FoodStore {
 
 	init() {
 		this.foods = this.foods.push(
-			new Food({ foodType: 'rice', id: shortId.generate() }),
-			new Food({ foodType: 'broccoli', id: shortId.generate() })
+			new Food({ foodType: 'Rice', id: shortId.generate() }),
+			new Food({ foodType: 'Broccoli', id: shortId.generate() })
 		);
 		this.trigger('foods_changed', this.foods);
 	}

@@ -1,19 +1,117 @@
 @import 'normalize';
 @import '../bower_components/susy/sass/susy';
+@import '../bower_components/breakpoint/breakpoint/breakpoint';
 @import 'variables';
 
 body {
+	font-size: $base-font-size;
 	font-family: $base-font;
 }
 
+h1 {
+	font-weight: 600;
+}
+
+h2 {
+	font-weight: 300;
+}
+
+.title {
+	padding-bottom: $margin-small;
+	margin-bottom: $margin-regular;
+	color: lighten($black, 10%);
+	
+	i {
+		font-size: .8em;
+		position: relative;
+		top: -.1em;
+		margin-right: .25em;
+	}
+}
+
+.section {
+	margin-bottom: $margin-small;
+}
+
 .container {
-	@include container(24 center);
+	@include container(center);
+	padding: 0 $margin-regular;
 	max-width: 800px;
 }
 
+.form-segment {
+	@include container(12);
+	border-bottom: 1px solid darken($white, 7.5%);
+	margin-bottom: $margin-regular;
+	padding: $margin-large 0 $margin-regular 0;
+	
+	&:first-child {
+		border-top: 1px solid darken($white, 7.5%);
+	}
+}
+
 .form-element {
-	@include span(11 of 24);
-	margin-bottom: 1em;
+	margin-bottom: 1rem;
+	
+	&:nth-child(3) {
+		margin-right: 0;
+	}
+}
+
+label {
+	@include span(4 of 12);
+	font-weight: 300;
+}
+
+.form-input-element {
+	@include span(8 of 12);
+	margin-right: 0;
+	
+	input,
+	select {
+		width: 95%;
+	}
+}
+
+.form-title {
+	@include span(2 of 12);
+}
+
+.pan-selector {
+	@include span(5 of 12);
+}
+
+.weight-input {
+	@include span(5 of 12);
+}
+
+@media (max-width: 400px) {
+	.form-title,
+	.pan-selector,
+	.weight-input {
+		@include span(12 of 12);
+		margin-right: 0;
+	}
+}
+
+.result-table {
+	width: 100%;
+
+	tr {
+		&:nth-child(odd) {
+			background-color: darken(white, 2.5%);
+		}
+	}
+
+	.result-table-sub-results {
+		font-weight: 300;
+	}
+
+	td,
+	th {
+		padding: $margin-regular $margin-regular;
+		text-align: left;
+	}
 }
 
 .cf:before,

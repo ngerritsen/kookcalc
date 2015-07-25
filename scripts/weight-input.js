@@ -4,8 +4,11 @@ import RiotControl from 'riotcontrol';
 riot.tag(
 	'weight-input',
 	`
-	<div class="form-element">
-		Weight: <input onchange="{onChangeWeight}" name="weight"/>
+	<div>
+		<label>Weight: </label>
+		<div class="form-input-element">
+			<input type="number" onchange="{onChangeWeight}" name="weight"/>
+		</div>
 	</div>
 	`,
 	function(opts) {

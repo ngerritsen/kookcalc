@@ -4,12 +4,13 @@ import RiotControl from 'riotcontrol';
 riot.tag(
 	'pan-selector',
 	`
-	<div class="form-element">
-		Pan: {opts.foodtype}
-		<select onchange="{onSelect}" name="panSelection">
-			<option each="{size in sizes}" value="{size.weight}">{size.name}</option>
-		</select>
-		{opts.panweight}
+	<div>
+		<label>Pan: </label>
+		<div class="form-input-element">
+			<select onchange="{onSelect}" name="panSelection">
+				<option each="{size in sizes}" value="{size.weight}">{size.name}</option>
+			</select>
+		</div>
 	</div>
 	`,
 	function(opts) {

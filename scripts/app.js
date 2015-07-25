@@ -4,20 +4,20 @@ import panSelector from './pan-selector';
 import weightInput from './weight-input';
 import foodAdder from './food-adder';
 import resultReport from './result-report';
+import inputForm from './input-form';
 
 riot.tag(
 	'app',	
 	`
 	<div class="container">
-		<h1>Kookcalc</h1>
-		<food-adder></food-adder>
-		<form class="cf">
-			<div each="{food in foods.toJS()}">
-				<pan-selector foodtype="{food.foodType}" id="{food.id}" panWeight="{food.panWeight}"></pan-selector>
-				<weight-input id="{food.id}" weight="{food.weight}"></weight-input>
-			</div>
-		</form>
-		<result-report foods="{foods}"></result-report>
+		<h1 class="title"><i class="fa fa-cutlery"></i> kookcalc_</h1>
+		<section class="section">
+			<input-form foods="{foods}"></input-form>
+		</section>
+		<section class="section">
+			<h2>Results</h2>
+			<result-report foods="{foods}"></result-report>
+		</section>
 	</div>
 	`,
 	function() {
