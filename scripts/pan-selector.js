@@ -16,9 +16,14 @@ riot.tag(
 	function(opts) {
 		this.sizes = [
 			{ name: '-', weight: null },
-			{ name: 'Big', weight: 1400 },
-			{ name: 'Medium', weight: 1200 },
-			{ name: 'Small', weight: 1100 }
+			{ name: 'Big', weight: 1485 },
+			{ name: 'Big + handles', weight: 1430 },
+			{ name: 'Medium', weight: 1127 },
+			{ name: 'Medium + handles', weight: 1072 },
+			{ name: 'Small', weight: 830 },
+			{ name: 'Small + handles', weight: 625 },
+			{ name: 'Casserole', weight: 680 },
+			{ name: 'Casserole + handles', weight: 625 }
 		];
 
 		this.onSelect = (e) => {
