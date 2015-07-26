@@ -1,11 +1,22 @@
 @import 'normalize';
 @import '../bower_components/susy/sass/susy';
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/breakpoint/breakpoint/breakpoint';
 @import 'variables';
 
 body {
 	font-size: $base-font-size;
 	font-family: $base-font;
+}
+
+.elegance-strip {
+	@include background(url("../images/bg.jpg") center top no-repeat fixed);
+	background-size: contain;
+	width: 100%;
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	height: 7px;
 }
 
 h1 {
@@ -17,16 +28,24 @@ h2 {
 	font-weight: 300;
 }
 
+.container {
+	@include container(center);
+	@include padding($margin-small $margin-regular + $margin-xsmall);
+	@include clearfix;
+	overflow: hidden;
+	max-width: $max-size;
+}
+
 .title {
 	padding-bottom: $margin-small;
-	margin-bottom: $margin-regular;
+	margin: $margin-large + $margin-xsmall 0 $margin-large 0;
 	color: lighten($black, 10%);
 	
 	i {
-		font-size: .8em;
+		font-size: 0.8em;
 		position: relative;
-		top: -.1em;
-		margin-right: .25em;
+		top: -0.1em;
+		margin-right: 0.25em;
 	}
 }
 
@@ -34,20 +53,15 @@ h2 {
 	margin-bottom: $margin-large;
 }
 
-.container {
-	@include container(center);
-	padding: 0 $margin-regular;
-	max-width: 800px;
-}
-
 .form-segment {
 	@include container(12);
-	border-bottom: 1px solid darken($white, 7.5%);
+	border-bottom: 1px solid $bearly-grey;
 	margin-bottom: $margin-regular;
 	padding: $margin-large 0 $margin-regular 0;
+	overflow: hidden;
 	
 	&:first-child {
-		border-top: 1px solid darken($white, 7.5%);
+		border-top: 1px solid $bearly-grey;
 	}
 }
 
@@ -66,15 +80,20 @@ label {
 
 .form-input-element {
 	@include span(8 of 12);
+	background-color: $bearly-grey;
 	margin-right: 0;
 	
-	input,
+	#{$all-text-inputs} {
+		width: 90%;
+	}
+
 	select {
 		width: 95%;
 	}
 }
 
 .form-title {
+	font-weight: 600;
 	@include span(2 of 12);
 }
 
@@ -95,6 +114,30 @@ label {
 	}
 }
 
+#{$all-text-inputs},
+select {
+	@include border-bottom-radius(0);
+	@include border-top-radius(0);
+	border-radius: 0 !important;
+	border: 0;
+	padding: 0 $margin-regular;
+	outline: none;
+}
+
+#{$all-text-inputs},
+select,
+.form-input-element {
+	background-color: $bearly-grey;
+}
+
+#{$all-text-inputs},
+select,
+label,
+.form-title  {
+	height: 32px;
+	line-height: 32px;
+}
+
 .result-table {
 	width: 100%;
 
@@ -113,14 +156,4 @@ label {
 		padding: $margin-regular $margin-regular;
 		text-align: left;
 	}
-}
-
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
 }

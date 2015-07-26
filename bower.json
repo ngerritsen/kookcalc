@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "susy": "~2.2.5",
-    "breakpoint": "~4.6.4"
+    "breakpoint": "~4.6.4",
+    "bourbon": "~4.2.3"
   }
 }

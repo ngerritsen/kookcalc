@@ -2,6 +2,8 @@ $base-font-size: 16px;
 $base-font: 'Open Sans', Helvetica, Arial, sans-serif;
 
 $white: #fff;
+$subtle-grey: darken($white, 10%);
+$bearly-grey: darken($white, 2.5%);
 $black: #000;
 
 $margin-regular: .8rem;
@@ -10,4 +12,5 @@ $margin-xsmall: $margin-regular / 4;
 $margin-large: $margin-regular * 2;
 $margin-xlarge: $margin-regular * 4;
 
-$mobile: (max-width 460px);
+$mobile: (max-width 480px);
+$max-size: 860px;

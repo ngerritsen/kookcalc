@@ -50,7 +50,6 @@ riot.tag(
 			this.totalPanWeight = opts.foods.reduce((total, food) => {
 				return total + Number(food.panWeight) || 0;
 			}, 0);
-			console.log(this.totalPanWeight);
 		}
 	}
 );
