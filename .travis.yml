@@ -1,4 +1,8 @@
 language: node_js
+install:
+	- npm install
+	- gem install sass
+	- bower install
 script:
   - npm run build:js
   - npm run build:css
