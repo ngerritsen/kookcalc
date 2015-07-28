@@ -2,6 +2,12 @@
   "name": "kookcalc",
   "description": "web app powered by riot.js",
   "version": "0.0.1",
+  "devDependencies": {
+    "babel-core": "^5.7.4",
+    "babel-loader": "^5.3.2",
+    "webpack": "^1.10.1",
+    "node-libs-browser": "^0.5.2"
+  }
   "scripts": {
     "build": "npm run build:js && npm run build:css",
     "build:js": "webpack scripts/index.js --module-bind 'js=babel' dist/bundle.js",
@@ -12,13 +18,9 @@
     "dev": "light-server -s . -w 'scripts/**' -c 'npm run build:js && npm run build:css'"
   },
   "dependencies": {
-    "babel-core": "^5.7.4",
-    "babel-loader": "^5.3.2",
     "immutable": "^3.7.4",
-    "node-libs-browser": "^0.5.2",
     "riot": "^2.0.12",
     "riotcontrol": "0.0.1",
-    "shortid": "^2.2.2",
-    "webpack": "^1.10.1"
+    "shortid": "^2.2.2"
   }
 }
