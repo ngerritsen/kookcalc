@@ -7,7 +7,7 @@
     "babel-loader": "^5.3.2",
     "webpack": "^1.10.1",
     "node-libs-browser": "^0.5.2"
-  }
+  },
   "scripts": {
     "build": "npm run build:js && npm run build:css",
     "build:js": "webpack scripts/index.js --module-bind 'js=babel' dist/bundle.js",
