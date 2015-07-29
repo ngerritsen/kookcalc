@@ -11,6 +11,6 @@ env:
     - secure: aPFBonqHCD/mkoXAVYzg7ha358Bxvpm7uzOsbiLBVzmkQaLYplEhVH6RsYxDhWC+D3Tqqzx38AklXxgASJwLQcgzNw5iWHEFegi5gtL8a58Ae8kbuIViscdJ/MVohdbyX16dZ5T+sdriKwGIZPTmGkaV+6XplCTlo2W2pjpbTdUQYWcvAWPksc5CzdfAKjowfVMsiX7K2fhJMNPQcHyzGl22EwtTd+Mdbz3i8E2C0Dv7APWmdvEn5DhBQUR24IXqBKrn277RXhlbj4fz0dpGn/sbsGuQtwn1bULpsN2WyfRuVZsuK7QbKyDc0IOwOMIf09zefXrx0xtldeVRzx7uBY7ZXYjp8o8ffEtIwohO106DcOrAa24evyDa2SzwMVP3Ksr8aXnviMBzkx//XY0sDwyZEoq/+GTRmP8SKgW1YH4TCmQCVJxF3d7oqypJHmwvRkf+V18/+u1IZukyN+hkUxUprAwDD26CydHUBnkgLzQydlWi1tifDrkUQkHazsjT2wmyAGEFT7Fs6+fxLoERpCCKhC0HTp666lBokNgBYYP325XRPVApEWUn/MMaY0kl1Bik4QK6IfYzWhNZH2NS1Ot1s1tDLpcPV54phkgfLHoZcDyfLTplIr6JzlaJkz1bhDfGpdH5GUQFJJbb6TFjfTLWljyvy0TUBI7XXNemv/s=
 after_success: 
     - "curl --ftp-create-dirs -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/"
-    - "curl --ftp-create-dirs -T dist/bundle.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/"
-    - "curl --ftp-create-dirs -T dist/main.css -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/"
-    - "curl --ftp-create-dirs -T dist/main.css.map -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/"
+    - "curl --ftp-create-dirs -T dist/bundle.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/dist/"
+    - "curl --ftp-create-dirs -T dist/main.css -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/dist/"
+    - "curl --ftp-create-dirs -T dist/main.css.map -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/dist/"
