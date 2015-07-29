@@ -15,7 +15,7 @@ riot.tag(
 			<input-form foods="{foods}"></input-form>
 		</section>
 		<section class="section">
-			<h2>Results</h2>
+			<h2>Results:</h2>
 			<result-report foods="{foods}"></result-report>
 		</section>
 	</div>
