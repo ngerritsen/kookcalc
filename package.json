@@ -11,12 +11,12 @@
   },
   "scripts": {
     "build": "npm run build:js && npm run build:css",
-    "build:js": "webpack scripts/index.js --module-bind 'js=babel' dist/bundle.js",
+    "build:js": "webpack",
     "build:css": "sass styles/main.scss dist/main.css",
     "watch": "npm run watch:js && npm run watch:css",
-    "watch:js": "webpack --watch scripts/index.js --module-bind 'js=babel' dist/bundle.js",
+    "watch:js": "webpack --watch",
     "watch:css": "sass --watch styles/main.scss:dist/main.css",
-    "dev": "light-server -s . -w 'scripts/**' -c 'npm run build:js && npm run build:css'"
+    "dev": "light-server -s . -w 'scripts/**' -c 'npm run watch:js && npm run watch:css'"
   },
   "dependencies": {
     "immutable": "^3.7.4",
