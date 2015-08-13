@@ -10,7 +10,7 @@ riot.tag(
 	'app',	
 	`
 	<div class="container">
-		<h1 class="title"><i class="fa fa-cutlery"></i> kookcalc_</h1>
+		<h1 class="title"><i class="fa fa-cutlery"></i> kookcalc_ test</h1>
 		<section class="section">
 			<input-form foods="{foods}"></input-form>
 		</section>
