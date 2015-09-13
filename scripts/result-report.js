@@ -14,13 +14,13 @@ riot.tag(
 		</tr>
 		<tr class="result-table-sub-results" each="{food in opts.foods.toJS()}">
 			<td>{food.foodType}</td>
-			<td>{foodUtils.calcWeightPerDay(food.weight, food.panWeight)}</td>
 			<td>{foodUtils.calcWeightPerMeal(food.weight, food.panWeight)}</td>
+			<td>{foodUtils.calcWeightPerDay(food.weight, food.panWeight)}</td>
 		</tr>
 		<tr class="result-table-total-results" class="total">
 			<td>Total</td>
-			<td>{foodUtils.calcWeightPerDay(totalWeight, totalPanWeight)}</td>
 			<td>{foodUtils.calcWeightPerMeal(totalWeight, totalPanWeight)}</td>
+			<td>{foodUtils.calcWeightPerDay(totalWeight, totalPanWeight)}</td>
 		</tr>
 	</table>
 	`,
