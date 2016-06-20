@@ -11,11 +11,25 @@
   <body>
     <div class="container">
       <h1 class="title">kookcalc</h1>
+
       <form class="food-form js-food-form">
-        <div class="input-container alt-weight">
-          <input type="number" name="weight" class="input js-weight-input"></input>
+        <div class="food-section">
+          <div class="food-name">Name</div>
+
+          <div class="input-container alt-weight">
+            <input type="number" name="weight" class="input js-weight-input"></input>
+          </div>
+
+          <div class="food-pan-options">
+            <button class="food-pan-option is-active js-pan-button" value="0">C</button>
+            <button class="food-pan-option js-pan-button" value="1">S</button>
+            <button class="food-pan-option js-pan-button" value="2">M</button>
+            <button class="food-pan-option js-pan-button" value="3">L</button>
+            <button class="food-pan-option alt-handle js-handle-button">H</button>
+          </div>
         </div>
       </form>
+
       <div class="js-result"></div>
     </div>
     <script src="main.js"></script>

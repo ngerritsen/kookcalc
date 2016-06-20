@@ -1,4 +1,5 @@
 import foodService from '../food-service'
+import { pans } from '../constants'
 
 export default function resultTable(el) {
   foodService.subscribe(onChangeFood)
@@ -7,7 +8,7 @@ export default function resultTable(el) {
     el.innerHTML = calculateResult(food)
   }
 
-  function calculateResult(food) {
-    return food.weight - 1000
+  function calculateResult({ weight, pan }) {
+    return (weight - pans[pan].weight) / 5
   }
 }

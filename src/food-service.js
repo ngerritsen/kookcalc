@@ -1,9 +1,10 @@
-let food = { weight: 0 }
+let food = { weight: 0, pan: 0 }
 let handlers = []
 
 export default  {
   subscribe,
-  changeFoodWeight
+  changeFoodWeight,
+  changeFoodPan
 }
 
 function subscribe(handler) {
@@ -11,7 +12,12 @@ function subscribe(handler) {
 }
 
 function changeFoodWeight(weight) {
-  food = { weight }
+  food = { ...food, weight }
+  publish()
+}
+
+function changeFoodPan(pan) {
+  food = { ...food, pan }
   publish()
 }
 
