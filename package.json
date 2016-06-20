@@ -1,27 +1,17 @@
 {
   "name": "kookcalc",
-  "description": "web app powered by riot.js",
+  "description": "web app powered by native js",
   "version": "0.0.1",
-  "devDependencies": {
-    "babel-core": "^5.7.4",
-    "babel-loader": "^5.3.2",
-    "bower": "^1.4.1",
-    "node-libs-browser": "^0.5.2",
-    "webpack": "^1.10.1"
-  },
   "scripts": {
-    "build": "npm run build:js && npm run build:css",
-    "build:js": "webpack",
-    "build:css": "sass styles/main.scss dist/main.css",
-    "watch": "npm run watch:js && npm run watch:css",
-    "watch:js": "webpack --watch",
-    "watch:css": "sass --watch styles/main.scss:dist/main.css",
-    "dev": "light-server -s . -w 'scripts/**' -c 'npm run watch:js && npm run watch:css'"
+    "build": "NODE_ENV=production webpack",
+    "watch": "webpack-dev-server --watch"
   },
-  "dependencies": {
-    "immutable": "^3.7.4",
-    "riot": "^2.0.12",
-    "riotcontrol": "0.0.1",
-    "shortid": "^2.2.2"
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }

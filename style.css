@@ -1,0 +1,62 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+.input {
+  border: 2px solid #000;
+  font-size: 1.6rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+}
+
+.input:hover {
+  border: 2px solid #444;
+}
+
+.input:focus {
+  border: 2px solid #3498db;
+  outline: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.title {
+  border-bottom: 2px solid #000;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container .input {
+  padding-left: 3.6rem;
+}
+
+.input-container:before {
+  background-color: #000;
+  bottom: 0;
+  color: #fff;
+  font-family: FontAwesome;
+  left: 0;
+  line-height: 3rem;
+  padding: 0.2rem 0 0 0.2rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 3.3rem;
+}
+
+.input-container.alt-weight:before {
+  content: '\f24e';
+}
