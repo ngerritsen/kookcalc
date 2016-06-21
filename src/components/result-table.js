@@ -5,10 +5,18 @@ export default function resultTable(el) {
   foodService.subscribe(onChangeFood)
 
   function onChangeFood(food) {
-    el.innerHTML = calculateResult(food)
+    const perDay = calculateResult(food)
+
+    el.innerHTML = '<tr>' +
+    '<td>' + 'Name' + '</td>' +
+      '<td>' + perDay / 2 + '</td>' +
+      '<td>' + perDay + '</td>' +
+    '</tr>'
   }
 
-  function calculateResult({ weight, pan }) {
-    return (weight - pans[pan].weight) / 5
+  function calculateResult({ weight, pan, handle }) {
+    const panWeight = pans[pan].weight
+    const finalPanWeight = handle ? panWeight + 100 : panWeight
+    return (weight - finalPanWeight) / 5
   }
 }
