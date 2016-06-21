@@ -1,10 +1,11 @@
-let food = { weight: 0, pan: 0 }
+let food = { weight: 0, pan: 0, handle: false }
 let handlers = []
 
 export default  {
   subscribe,
   changeFoodWeight,
-  changeFoodPan
+  selectFoodPan,
+  toggleHandle
 }
 
 function subscribe(handler) {
@@ -16,8 +17,13 @@ function changeFoodWeight(weight) {
   publish()
 }
 
-function changeFoodPan(pan) {
+function selectFoodPan(pan) {
   food = { ...food, pan }
+  publish()
+}
+
+function toggleHandle() {
+  food = { ...food, handle: !food.handle }
   publish()
 }
 

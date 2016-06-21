@@ -45,7 +45,7 @@ body {
 
 .input:focus,
 .input:hover {
-  background-color: #eee;
+  background-color: #f2f2f2;
   outline: none;
 }
 
@@ -116,7 +116,7 @@ body {
 
 .food-pan-option:hover,
 .food-pan-option:focus {
-  background-color: #aaa;
+  opacity: 0.8;
   cursor: pointer;
   outline: none;
 }
@@ -131,7 +131,7 @@ body {
   color: #000;
 }
 
-.food-pan-option.alt-handle:hover,
-.food-pan-option.alt-handle:focus {
-  background-color: #aaa !important;
+.food-pan-option.alt-handle.is-active {
+  background-color: #000;
+  color: #fff;
 }
