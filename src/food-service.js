@@ -1,14 +1,17 @@
-let foods = [createFood(0, 'Name')]
+let foods = []
 let handlers = []
 let lastId = 0
+
+function getFoods() {
+  return foods
+}
 
 function subscribe(handler) {
   handlers = [ ...handlers, handler ]
 }
 
 function addFood(name) {
-  const id = lastId++
-  foods = [...foods, createFood(id, name)]
+  foods = [...foods, createFood(++lastId, name)]
   publish()
 }
 
@@ -37,19 +40,21 @@ function publish() {
   handlers.forEach(handler => handler(foods))
 }
 
-function createFood(name, id) {
+function createFood(id, name) {
   return {
-    id: 0,
     weight: 0,
     pan: 0,
     handle: false,
+    id,
     name
   }
 }
 
 export default  {
+  addFood,
   subscribe,
   changeFoodWeight,
   selectFoodPan,
-  toggleHandle
+  toggleHandle,
+  getFoods
 }
