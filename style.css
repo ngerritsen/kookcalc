@@ -143,12 +143,18 @@ body {
   color: #fff;
 }
 
+.settings-form {
+  display: flex;
+}
+
 /**
   Add food
 **/
 .add-food-form {
   display: flex;
   margin-bottom: 3rem;
+  margin-right: 1rem;
+  width: 100%;
 }
 
 .add-food-button {
@@ -162,6 +168,31 @@ body {
 
 .add-food-button:hover,
 .add-food-button:focus {
+  opacity: 0.8;
+  cursor: pointer;
+  outline: none;
+}
+
+/**
+  Change days
+**/
+.days-form {
+  display: flex;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.change-days-button {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  height: 4rem;
+  width: 4rem;
+}
+
+.change-days-button:hover,
+.change-days-button:focus {
   opacity: 0.8;
   cursor: pointer;
   outline: none;

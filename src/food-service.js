@@ -1,10 +1,12 @@
+import { createFood } from './factories'
+
 let foods = []
 let handlers = []
 let lastId = 0
+let days = 5
 
-function getFoods() {
-  return foods
-}
+const getFoods = () => foods
+const getDays = () => days
 
 function subscribe(handler) {
   handlers = [ ...handlers, handler ]
@@ -27,6 +29,11 @@ function toggleHandle(id) {
   updateFood(id, food => ({ ...food, handle: !food.handle }))
 }
 
+function changeDays(newDays) {
+  days = newDays
+  publish()
+}
+
 function updateFood(id, updater) {
   foods = foods.map(food =>
     food.id === id ?
@@ -37,21 +44,13 @@ function updateFood(id, updater) {
 }
 
 function publish() {
-  handlers.forEach(handler => handler(foods))
-}
-
-function createFood(id, name) {
-  return {
-    weight: 0,
-    pan: 0,
-    handle: false,
-    id,
-    name
-  }
+  handlers.forEach(handler => handler(foods, days))
 }
 
 export default  {
   addFood,
+  getDays,
+  changeDays,
   subscribe,
   changeFoodWeight,
   selectFoodPan,

@@ -3,11 +3,11 @@ import { pans } from '../constants'
 import { htmlToElement } from '../helpers'
 
 export default function resultTable(el) {
-  renderResult(foodService.getFoods())
+  renderResult(foodService.getFoods(), foodService.getDays())
   foodService.subscribe(renderResult)
 
-  function renderResult(foods) {
-    const results = foods.map(food => ({ name: food.name, perDay: calculateResult(food) }))
+  function renderResult(foods, days) {
+    const results = foods.map(food => ({ name: food.name, perDay: calculateResult(food, days) }))
     const total = calculateResultTotal(results)
     const resultEls = results
       .map(({ name, perDay }) => createFoodResultEl(name, perDay))
@@ -32,10 +32,10 @@ export default function resultTable(el) {
     </tr>`
   }
 
-  function calculateResult({ weight, pan, handle }) {
+  function calculateResult({ weight, pan, handle }, days) {
     const panWeight = pans[pan].weight
     const finalPanWeight = handle ? panWeight + 100 : panWeight
-    return (weight - finalPanWeight) / 5
+    return (weight - finalPanWeight) / days
   }
 
   function calculateResultTotal(results) {
