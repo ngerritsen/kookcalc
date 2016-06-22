@@ -1,5 +1,6 @@
 import foodService from '../food-service'
 import { htmlToElement } from '../helpers'
+import { pans } from '../constants'
 
 export default function foodFormSection(el, id, name) {
   const contentEl = createContentEl()
@@ -67,12 +68,15 @@ export default function foodFormSection(el, id, name) {
         <div class="input-container alt-weight">
           <input type="number" name="weight" class="input js-weight-input"></input>
         </div>
-
         <div class="food-pan-options">
-          <button class="food-pan-option is-active js-pan-button" value="0">C</button>
-          <button class="food-pan-option js-pan-button" value="1">S</button>
-          <button class="food-pan-option js-pan-button" value="2">M</button>
-          <button class="food-pan-option js-pan-button" value="3">L</button>
+          ${pans
+            .map(({ tag }, id) =>
+              `<button
+                class="food-pan-option js-pan-button${id === 0 ? ' is-active': ''}"
+                value="${id}"
+              >${tag}</button>`
+            ).join('\n')
+          }
           <button class="food-pan-option alt-handle js-handle-button">H</button>
         </div>
       </div>`
