@@ -2,11 +2,8 @@
 @import 'buttons.scss';
 @import 'inputs.scss';
 @import 'forms.scss';
-@import 'result.scss';
-
-/*
-  Base
-*/
+@import 'results.scss';
+@import 'flex-sections.scss';
 
 *,
 *:before,
@@ -23,81 +20,15 @@ body {
   font-size: 1.6rem;
 }
 
-/*
-  Main
-*/
+hr {
+  border-bottom: 1px solid darken($white, 15%);
+}
 
 .container {
-  margin: 0 auto;
+  margin: 3rem auto;
   max-width: 80rem;
 }
 
 .title {
   margin-bottom: 2rem;
-}
-
-/*
-  Food
-*/
-
-.food-form {
-  margin-bottom: 2rem;
-}
-
-.food-section {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.food-section > * {
-  margin-right: 2rem;
-}
-
-.food-section > *:last-child {
-  margin-right: 0;
-}
-
-.food-name {
-  line-height: 4rem;
-  font-weight: bold;
-  width: 20%;
-}
-
-.food-pan-options {
-  min-width: 25rem;
-}
-
-.food-pan-option {
-  background-color: #ccc;
-  border: none;
-  color: #fff;
-  display: inline-block;
-  font-weight: bold;
-  height: 4rem;
-  margin: 0 0.5rem 0 0;
-  width: 4rem;
-}
-
-.food-pan-option:hover,
-.food-pan-option:focus {
-  opacity: 0.8;
-  cursor: pointer;
-  outline: none;
-}
-
-.food-pan-option.is-active {
-  background-color: #000;
-}
-
-.food-pan-option.alt-handle {
-  border: 3px solid #000;
-  background-color: #fff;
-  color: #000;
-  float: right;
-  margin-right: 0;
-}
-
-.food-pan-option.alt-handle.is-active {
-  background-color: #000;
-  color: #fff;
 }

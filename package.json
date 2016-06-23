@@ -3,11 +3,11 @@
   "description": "web app powered by native js",
   "version": "0.0.1",
   "scripts": {
-    "build": "NODE_ENV=production webpack; npm run sass",
+    "build": "NODE_ENV=production webpack; npm run sass",pm
     "watch": "webpack-dev-server --watch",
     "start": "npm run watch",
     "sass": "node-sass src/styles/main.scss style.css",
-    "sass:watch": "node-sass --watch src/styles/main.scss style.css"
+    "sass:watch": "npm run sass; node-sass --watch src/styles/main.scss style.css"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",

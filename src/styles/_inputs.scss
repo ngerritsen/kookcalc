@@ -1,3 +1,9 @@
+.label {
+  height: 4rem;
+  line-height: 4rem;
+  width: 20rem;
+}
+
 .input {
   background-color: $white;
   border: 1px solid darken($white, 15%);
@@ -23,13 +29,13 @@
 }
 
 .input-container .input {
-  padding-left: 5.2rem;
+  padding-left: 4.2rem;
 }
 
 .input-container:before {
-  background-color: #000;
   bottom: 0;
-  color: #fff;
+  border-radius: 3px;
+  color: darken($white, 35%);
   font-family: FontAwesome;
   left: 0;
   line-height: 4rem;

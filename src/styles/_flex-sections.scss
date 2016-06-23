@@ -1,0 +1,12 @@
+.flex-section {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.flex-section > * {
+  margin-right: 2rem;
+}
+
+.flex-section > *:last-child {
+  margin-right: 0;
+}

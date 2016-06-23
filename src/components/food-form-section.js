@@ -63,22 +63,22 @@ export default function foodFormSection(el, id, name) {
 
   function createContentEl() {
     return htmlToElement(
-      `<div class="food-section">
-        <div class="food-name">${name}</div>
+      `<div class="flex-section">
+        <label class="label" for="weight">${name}</label>
         <div class="input-container alt-weight">
           <input type="number" name="weight" class="input js-weight-input"></input>
         </div>
-        <div class="food-pan-options">
+        <div class="button-group">
           ${pans
             .map(({ tag }, id) =>
               `<button
-                class="food-pan-option js-pan-button${id === 0 ? ' is-active': ''}"
+                class="button alt-switch js-pan-button${id === 0 ? ' is-active': ''}"
                 value="${id}"
               >${tag}</button>`
             ).join('\n')
           }
-          <button class="food-pan-option alt-handle js-handle-button">H</button>
         </div>
+        <button class="button alt-switch js-handle-button">H</button>
       </div>`
     )
   }
