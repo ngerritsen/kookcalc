@@ -1,6 +1,6 @@
 .flex-section {
   display: flex;
-  margin-bottom: 2rem;
+  justify-content: space-between;
 }
 
 .flex-section > * {
@@ -9,4 +9,14 @@
 
 .flex-section > *:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 600px) {
+  .flex-section.alt-desktop {
+    display: block;
+  }
+
+  .flex-section.alt-desktop > * {
+    margin-right: 0;
+  }
 }

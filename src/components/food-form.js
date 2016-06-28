@@ -19,7 +19,7 @@ export default function foodForm(el) {
   }
 
   function addFoodSection(name, id) {
-    const containerEl = htmlToElement(`<div class="js-food-section-${id}"></div>`)
+    const containerEl = htmlToElement(`<div class="js-food-section-${id} food-section-container"></div>`)
     el.appendChild(containerEl)
     foodFormSection(containerEl, id, name)
   }

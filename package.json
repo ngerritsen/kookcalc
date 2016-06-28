@@ -3,7 +3,7 @@
   "description": "web app powered by native js",
   "version": "0.0.1",
   "scripts": {
-    "build": "NODE_ENV=production webpack; npm run sass",pm
+    "build": "NODE_ENV=production webpack; npm run sass",
     "watch": "webpack-dev-server --watch",
     "start": "npm run watch",
     "sass": "node-sass src/styles/main.scss style.css",

@@ -1,0 +1,17 @@
+.food-section-container {
+  background-color: darken($white, 2%);
+  border: 1px solid darken($white, 10%);
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .food-section-container .flex-section.alt-desktop > .flex-section {
+    margin-bottom: 1.4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
