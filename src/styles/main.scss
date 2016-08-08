@@ -1,55 +1,26 @@
-@import 'variables.scss';
-@import 'buttons.scss';
-@import 'inputs.scss';
-@import 'forms.scss';
-@import 'results.scss';
-@import 'flex-sections.scss';
-@import 'food-section.scss';
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+@import 'variables';
+@import 'mixins';
+@import 'input';
+@import 'table';
 
 html {
   font-size: 62.5%;
+  font-family: 'Open sans', sans-serif;
 }
 
 body {
-  font-family: 'Open sans', sans-serif;
+  background-color: $dark;
+  color: $white;
   font-size: 1.6rem;
   margin: 0;
 }
 
-hr {
-  border-bottom: 1px solid darken($white, 15%);
-}
-
 .container {
-  margin: 3rem auto;
-  max-width: 80rem;
-  padding: 0 1.2rem;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 2rem;
 }
 
 .title {
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 600px) {
-  .main-form {
-    display: flex;
-  }
-
-  .main-form > * {
-    margin-right: 2rem;
-  }
-
-  .main-form > *:last-child {
-    margin-right: 0;
-  }
-}
-
-.right {
-  text-align: right;
+  color: $grey;
 }
