@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <script src="https://use.fontawesome.com/661a5a5463.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>kookcalc_</title>
   </head>
@@ -12,23 +12,29 @@
     <div class="container">
       <h1 class="title">kookcalc</h1>
 
-      <form class="food-form js-food-form"></form>
+      <div class="js-foods"></div>
 
-      <div class="main-form">
-        <form class="form alt-inline js-add-food-form">
-          <input type="text" name="name" class="input-field js-food-name" placeholder="Name"></input>
-          <button class="button" type="submit">
-            <i class="fa fa-plus"></i>
-          </button>
-        </form>
+      <form class="add-food-form js-add-food-form">
+        <label class="label" for="name">Add food:</label>
+        <input type="text" name="name" id="name" class="input-field js-food-name" placeholder="Name"></input>
+        <button class="add-food-form__button" type="submit">
+          <i class="fa fa-plus"></i>
+        </button>
+      </form>
 
-        <form class="form alt-inline js-days-form">
-          <input type="text" name="name" class="input-field js-days"></input>
-          <button class="button" type="submit">
-            Set days
-          </button>
-        </form>
-      </div>
+      <form class="days-form js-days-form">
+        <label class="label" for="days">Days:</label>
+        <span class="select-box">
+          <select class="select-box__select js-days" name="days" id="days">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </span>
+      </form>
 
       <table class="table">
         <thead>

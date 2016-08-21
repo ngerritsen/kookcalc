@@ -1,0 +1,92 @@
+$food-pan-size-size: 3rem;
+
+.food {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid lighten($dark, 5%);
+}
+
+.food__name {
+  width: 50%;
+}
+
+.food__weight-input:before {
+  font-family: FontAwesome;
+  content: "\f24e";
+  color: lighten($dark, 25%);
+  margin-right: 0.75rem;
+}
+
+.food__weight-label {
+  display: none;
+}
+
+.food__pan-size-label {
+  @include vertical-center-text($food-pan-size-size);
+
+  display: inline-block;
+  background-color: lighten($dark, 10%);
+  border-radius: 3px;
+  width: $food-pan-size-size;
+  text-align: center;
+}
+
+.food__pan-size-radio:checked + .food__pan-size-label {
+  background-color: $blue;
+  color: $white;
+}
+
+.food__pan-size-label:hover,
+.food__pan-size-radio:focus + .food__pan-size-label {
+  background-color: lighten($dark, 15%);
+  cursor: pointer;
+}
+
+.food__pan-size-radio {
+  display: none;
+}
+
+.food__handle-label {
+  @include vertical-center-text($food-pan-size-size);
+
+  display: inline-block;
+  background-color: $red;
+  border-radius: 3px;
+  text-align: center;
+  padding: 0 0.9rem;
+
+  &:before {
+    display: inline-block;
+    content: "\f00d";
+    font-family: FontAwesome;
+    width: 1.8rem;
+    text-align: left;
+  }
+}
+
+.food__handle-checkbox {
+  display: none;
+}
+
+.food__handle-checkbox:checked + .food__handle-label {
+  background-color: $green;
+  color: $white;
+
+  &:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+  }
+}
+
+.food__handle-label:hover,
+.food__handle-radio:focus + .food__handle-label {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media (min-width: 520px) {
+  .food__name {
+    width: 25%;
+  }
+}

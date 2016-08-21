@@ -1,8 +1,8 @@
 import foodService from '../food-service'
-import foodFormSection from './food-form-section'
+import food from './food'
 import { htmlToElement } from '../helpers'
 
-export default function foodForm(el) {
+export default function foods(el) {
   let foods = foodService.getFoods()
 
   el.addEventListener('submit', ev => ev.preventDefault())
@@ -21,6 +21,6 @@ export default function foodForm(el) {
   function addFoodSection(name, id) {
     const containerEl = htmlToElement(`<div class="js-food-section-${id}"></div>`)
     el.appendChild(containerEl)
-    foodFormSection(containerEl, id, name)
+    food(containerEl, id, name)
   }
 }

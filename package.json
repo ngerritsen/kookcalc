@@ -5,7 +5,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack; npm run sass",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --watch",
+    "start": "webpack-dev-server --watch --port 8011",
     "sass": "node-sass src/styles/main.scss style.css",
     "sass:watch": "npm run sass; node-sass --watch src/styles/main.scss style.css"
   },

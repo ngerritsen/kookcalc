@@ -1,13 +1,14 @@
 import foodService from '../food-service'
 
 export default function daysForm(el) {
-  const daysInputEl = el.querySelector('.js-days')
+  const daysSelectEl = el.querySelector('.js-days')
 
-  daysInputEl.value = foodService.getDays()
-  el.addEventListener('submit', changeDays)
+  daysSelectEl.value = foodService.getDays()
+  el.addEventListener('change', changeDays)
 
   function changeDays(ev) {
     ev.preventDefault()
-    foodService.changeDays(daysInputEl.value)
+    console.log(ev.target.value)
+    foodService.changeDays(ev.target.value)
   }
 }

@@ -1,7 +1,9 @@
 @import 'variables';
 @import 'mixins';
 @import 'input';
+@import 'select-box';
 @import 'table';
+@import 'food';
 
 html {
   font-size: 62.5%;
@@ -10,7 +12,7 @@ html {
 
 body {
   background-color: $dark;
-  color: $white;
+  color: lighten($dark, 72%);
   font-size: 1.6rem;
   margin: 0;
 }
@@ -23,4 +25,41 @@ body {
 
 .title {
   color: $grey;
+}
+
+.label {
+  margin-right: 0.8rem;
+}
+
+.add-food-form {
+  margin-bottom: 1.6rem;
+}
+
+.add-food-form__button {
+  @include vertical-center-text(3rem);
+
+  border: none;
+  background-color: $blue;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  color: $white;
+  margin-left: 0.6rem;
+  padding: 0 0.8rem;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    opacity: 0.8;
+    outline: none;
+  }
+}
+
+@media (min-width: 520px) {
+  .add-food-form {
+    display: inline-block;
+  }
+
+  .days-form {
+    float: right;
+  }
 }

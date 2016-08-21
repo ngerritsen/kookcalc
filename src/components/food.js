@@ -2,15 +2,15 @@ import foodService from '../food-service'
 import { htmlToElement } from '../helpers'
 import { pans } from '../constants'
 
-export default function foodFormSection(el, id, name) {
-  const contentEl = createContentEl()
-  const weightInputEl = contentEl.querySelector('.js-weight-input')
-  const panButtonEls = contentEl.querySelectorAll('.js-pan-button')
-  const handleToggleEl = contentEl.querySelector('.js-handle-button')
+export default function food(el, id, name) {
+  const formEl = createformEl()
+  const weightInputEl = formEl.querySelector('.js-weight-input')
+  const panButtonEls = formEl.querySelectorAll('.js-pan-button')
+  const handleToggleEl = formEl.querySelector('.js-handle-button')
   const activeClass = 'is-active'
 
   registerEventListeners()
-  el.appendChild(contentEl)
+  el.appendChild(formEl)
   foodService.subscribe(onChangeFoods)
 
   function registerEventListeners() {
@@ -61,23 +61,34 @@ export default function foodFormSection(el, id, name) {
     })
   }
 
-  function createContentEl() {
+  function createformEl() {
     return htmlToElement(
-      `<div>
-          <label class="label" for="weight">${name}</label>
+      `<form class="food">
+        <span class="food__name">${name}</span>
+        <span class="food__weight-input">
+          <label class="food__weight-label" for="weight">Weight</label>
           <input type="number" name="weight" class="input-field js-weight-input"></input>
-          <div class="button-group">
-            ${pans
-              .map(({ tag }, id) =>
-                `<button
-                  class="js-pan-button${id === 0 ? ' is-active': ''}"
-                  value="${id}"
-                >${tag}</button>`
-              ).join('\n')
-            }
-          </div>
-          <button class="button js-handle-button">H</button>
-      </div>`
+        </span>
+        ${pans
+          .map(({ tag }, id) =>
+            `<span class="food__pan-size">
+              <input
+                type="radio"
+                name="pan-size"
+                id="pan-size-${id}"
+                class="js-pan-button food__pan-size-radio"
+                ${id === 0 ? 'checked' : ''}
+                value="${id}"
+              >
+              <label class="food__pan-size-label" for="pan-size-${id}">${tag}</label>
+            </span>`
+          ).join('\n')
+        }
+        <span class="food__handle">
+          <input type="checkbox" name="handle" id="handle" class="food__handle-checkbox js-handle-button">
+          <label class="food__handle-label" for="handle">Handle</label>
+        </span>
+      </form>`
     )
   }
 }
