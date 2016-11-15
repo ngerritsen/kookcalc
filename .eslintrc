@@ -1,0 +1,13 @@
+{
+  "extends": "ngerritsen",
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  }
+}

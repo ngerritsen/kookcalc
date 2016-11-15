@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'mixins';
+
+$input-height: 3.2rem;
+
+.food {
+  background: $color-white;
+  padding: $spacing-medium $spacing-medium;
+  border: 1px solid darken($color-white, 10%);
+  border-radius: 4px;
+}
+
+.food__title {
+  margin: 0 0 $spacing-small 0;
+  font-size: 1.8rem;
+}
+
+.food__weight-input,
+.food__pan-select {
+  height: $input-height;
+  line-height: $input-height;
+  border: 1px solid darken($color-white, 20%);
+  background-color: darken($color-white, 3%);
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0 $spacing-small;
+  font-size: 1.4rem;
+  min-width: 12rem;
+  width: 100%;
+}
+
+.food__weight-input {
+  margin-right: $spacing-x-small;
+}
+
+.food__input-container {
+  display: flex;
+}
+
+@include from($size-small) {
+  .food {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .food__title {
+    margin: 0;
+    line-height: $input-height;
+  }
+
+  .food__weight-input,
+  .food__pan-select {
+    width: auto;
+  }
+
+  .food__input-container {
+    display: block;
+  }
+}

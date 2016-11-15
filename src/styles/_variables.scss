@@ -1,7 +1,11 @@
-$white: #fff;
-$black: #000;
-$dark: #2b333b;
-$grey: #67737e;
-$blue: #219ced;
-$red: #f42f2f;
-$green: #13e76b;
+$color-white: #fff;
+$color-purple: #9b59b6;
+
+$spacing-medium: 2.1rem;
+$spacing-small: $spacing-medium / 2;
+$spacing-x-small: $spacing-small / 2;
+$spacing-large: $spacing-medium * 2;
+
+$size-small: 540px;
+$size-medium: 720px;
+$size-large: 960px;

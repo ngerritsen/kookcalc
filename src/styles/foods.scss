@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+.foods {
+  margin: 0;
+  padding: 0;
+}
+
+.foods__item {
+  list-style: none;
+  padding: 0;
+  margin-bottom: $spacing-medium;
+}
+
+@include from($size-small) {
+  .foods {
+    padding: 0 $spacing-small;
+  }
+}
+
+@include from($size-large) {
+  .foods {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .foods__item {
+    flex-grow: 1;
+    min-width: 40%;
+    margin-right: $spacing-small;
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,4 +1,5 @@
-@mixin vertical-center-text($height) {
-  height: $height;
-  line-height: $height;
+@mixin from($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
 }

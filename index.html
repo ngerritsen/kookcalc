@@ -1,53 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>kookcalc_</title>
+    <title>kookcalc</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="title">kookcalc</h1>
-
-      <div class="js-foods"></div>
-
-      <form class="add-food-form js-add-food-form">
-        <label class="label" for="name">Add food:</label>
-        <input type="text" name="name" id="name" class="input-field js-food-name" placeholder="Name"></input>
-        <button class="add-food-form__button" type="submit">
-          <i class="fa fa-plus"></i>
-        </button>
-      </form>
-
-      <form class="days-form js-days-form">
-        <label class="label" for="days">Days:</label>
-        <span class="select-box">
-          <select class="select-box__select js-days" name="days" id="days">
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5" selected>5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-          </select>
-        </span>
-      </form>
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Food</th>
-            <th>Per meal</th>
-            <th>Per day</th>
-          </tr>
-        </thead>
-        <tbody class="js-result">
-        </tbody>
-      </table>
-    </div>
+    <div id="app"></div>
     <script src="main.js"></script>
   </body>
 </html>
