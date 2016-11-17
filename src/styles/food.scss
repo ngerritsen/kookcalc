@@ -6,25 +6,29 @@ $input-height: 3.2rem;
 .food {
   background: $color-white;
   padding: $spacing-medium $spacing-medium;
-  border: 1px solid darken($color-white, 10%);
-  border-radius: 4px;
+  border-color: darken($color-white, 12.5%);
+  border-style: solid;
+  border-width: 1px 0 3px;
 }
 
 .food__title {
   margin: 0 0 $spacing-small 0;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .food__weight-input,
 .food__pan-select {
   height: $input-height;
   line-height: $input-height;
-  border: 1px solid darken($color-white, 20%);
+  border-color: darken($color-white, 20%);
+  border-style: solid;
+  border-width: 2px 1px 1px;
   background-color: darken($color-white, 3%);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 0 $spacing-small;
   font-size: 1.4rem;
+  font-family: inherit;
   min-width: 12rem;
   width: 100%;
 }
@@ -41,6 +45,8 @@ $input-height: 3.2rem;
   .food {
     display: flex;
     justify-content: space-between;
+    border-radius: 4px;
+    border-width: 1px 1px 3px 1px;
   }
 
   .food__title {

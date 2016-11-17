@@ -9,7 +9,7 @@
 .foods__item {
   list-style: none;
   padding: 0;
-  margin-bottom: $spacing-medium;
+  margin-bottom: $spacing-small;
 }
 
 @include from($size-small) {
@@ -22,11 +22,13 @@
   .foods {
     display: flex;
     flex-wrap: wrap;
+
   }
 
   .foods__item {
     flex-grow: 1;
     min-width: 40%;
+    max-width: 50%;
     margin-right: $spacing-small;
 
     &:nth-child(2) {

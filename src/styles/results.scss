@@ -1,0 +1,34 @@
+@import 'variables';
+
+.results {
+  background-color: darken($color-white, 2%);
+  border: 1px solid darken($color-white, 10%);
+  border-radius: 3px;
+  padding: $spacing-small;
+  margin: $spacing-small;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.results__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results__table,
+.results__row,
+.results__cell {
+  border-collapse: collapse;
+  border: 1px solid darken($color-white, 20%);
+  padding: $spacing-small;
+}
+
+.results__cell--heading {
+  font-weight: 700;
+  text-align: left;
+}
+
+.results__cell--total {
+  font-style: italic;
+}

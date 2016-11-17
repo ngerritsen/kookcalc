@@ -18,10 +18,6 @@ const config = {
       {
         test: /.scss$/,
         loader: 'style!css!sass'
-      },
-      {
-        test: /.vue$/,
-        loader: 'vue'
       }
     ]
   }
