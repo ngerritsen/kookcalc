@@ -2,6 +2,7 @@
 node_modules/
 dist/
 npm-debug.log
-main.js
+/main.js
 style.css
 vendor.js
+/index.html
