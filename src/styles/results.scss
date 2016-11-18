@@ -4,6 +4,9 @@
 .results {
   background-color: $color-white;
   padding: $spacing-medium;
+  border-color: darken($color-cloud, 7.5%);
+  border-style: solid;
+  border-width: 1px 0;
   margin-bottom: $spacing-medium;
   position: relative;
   overflow: hidden;
@@ -18,8 +21,16 @@
 .results__row,
 .results__cell {
   border-collapse: collapse;
-  border: 1px solid darken($color-white, 17.5%);
   padding: $spacing-small;
+}
+
+.results__unit {
+  color: darken($color-white, 60%);
+  margin-left: 1px;
+}
+
+.results__row {
+  border-bottom: 1px solid darken($color-cloud, 10%);
 }
 
 .results__cell--heading {
@@ -28,6 +39,7 @@
 }
 
 .results__cell--total {
+  background-color: lighten($color-cloud, 3.5%);
   font-style: italic;
 }
 
@@ -35,5 +47,7 @@
   .results {
     padding: $spacing-small;
     margin: 0 $spacing-small $spacing-medium;
+    border-radius: 2px;
+    border-width: 1px
   }
 }

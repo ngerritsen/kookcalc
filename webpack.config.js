@@ -37,21 +37,22 @@ const config = {
       filename: 'index.html',
       template: './src/index.html',
       inject: true,
-      hash: true
+      hash: true,
+      cache: false
     }),
-    new ExtractTextPlugin("style.css"),
+    new ExtractTextPlugin('style.css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(env)
+        NODE_ENV: JSON.stringify(env)
       }
     })
   ]
 };
 
 if (env === 'development') {
-  config.devtool = 'source-map'
+  config.devtool = 'source-map';
 }
 
 if (env === 'production') {

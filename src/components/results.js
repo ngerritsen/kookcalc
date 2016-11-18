@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
 import '../styles/results.scss';
 
 function Results({ results, totalResults }) {
@@ -15,20 +15,24 @@ function Results({ results, totalResults }) {
         {results.map(result =>
           <tr className="results__row" key={result.food}>
             <td className="results__cell">{result.food}</td>
-            <td className="results__cell">{result.perDay}g</td>
-            <td className="results__cell">{result.perMeal}g</td>
+            <td className="results__cell">{result.perDay}<span className="results__unit">g</span></td>
+            <td className="results__cell">{result.perMeal}<span className="results__unit">g</span></td>
           </tr>
         )}
       </tbody>
       <tfoot>
         <tr className="results__row">
           <td className="results__cell results__cell--total">Total</td>
-          <td className="results__cell results__cell--total">{totalResults.perDay}g</td>
-          <td className="results__cell results__cell--total">{totalResults.perMeal}g</td>
+          <td className="results__cell results__cell--total">
+            {totalResults.perDay}<span className="results__unit">g</span>
+          </td>
+          <td className="results__cell results__cell--total">
+            {totalResults.perMeal}<span className="results__unit">g</span>
+          </td>
         </tr>
       </tfoot>
     </table>
-  </div>
+  </div>;
 }
 
 Results.propTypes = {
@@ -43,6 +47,6 @@ Results.propTypes = {
     perDay: PropTypes.number.isRequired,
     perMeal: PropTypes.number.isRequired
   })
-}
+};
 
-export default Results
+export default Results;

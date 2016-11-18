@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react'
-import { pans } from '../constants'
+import React, { PropTypes } from 'react';
+import { pans } from '../constants';
 
 import '../styles/food.scss';
 
@@ -28,17 +28,17 @@ function Food({ food, changeWeight, changePan }) {
         )}
       </select>
     </div>
-  </form>
+  </form>;
 }
 
 Food.propTypes = {
+  changePan: PropTypes.func.isRequired,
+  changeWeight: PropTypes.func.isRequired,
   food: PropTypes.shape({
     name: PropTypes.string.isRequired,
     weight: PropTypes.number.isRequired,
     pan: PropTypes.number.isRequired
-  }).isRequired,
-  changeWeight: PropTypes.func.isRequired,
-  changePan: PropTypes.func.isRequired
-}
+  }).isRequired
+};
 
-export default Food
+export default Food;

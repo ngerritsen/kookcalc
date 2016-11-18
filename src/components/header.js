@@ -6,5 +6,5 @@ export default function Header() {
     <h1 className="header__title">
       <strong>Kook</strong>calc
     </h1>
-  </header>
+  </header>;
 }

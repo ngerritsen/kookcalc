@@ -2,9 +2,10 @@ language: node_js
 node_js:
   - '6'
 install:
-- npm install
+  - npm install
 script:
-- npm run build
+  - npm test
+  - npm run build
 after_success:
     - "curl --ftp-create-dirs -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
     - "curl --ftp-create-dirs -T main.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"

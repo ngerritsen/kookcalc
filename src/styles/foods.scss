@@ -27,11 +27,12 @@
 
   .foods__item {
     flex-grow: 1;
-    min-width: 40%;
+    min-width: 48%;
     max-width: 50%;
+    max-width: calc(50% - #{$spacing-small / 2});
     margin-right: $spacing-small;
 
-    &:nth-child(2) {
+    &:nth-child(even) {
       margin-right: 0;
     }
   }

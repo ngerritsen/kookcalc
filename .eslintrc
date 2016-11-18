@@ -1,13 +1,31 @@
 {
-  "extends": "ngerritsen",
+  "extends": [
+    "ngerritsen",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react"],
   "env": {
-    "node": true
+    "node": true,
+    "browser": true
   },
   "parserOptions": {
     "ecmaVersion": 2016,
     "sourceType": "module",
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
+      "experimentalObjectRestSpread": true,
+      "jsx": true
     }
+  },
+  "rules": {
+    "react/jsx-pascal-case": 2,
+    "react/jsx-indent-props": [2, 2],
+    "react/no-multi-comp": 2,
+    "react/prefer-es6-class": 2,
+    "react/prefer-stateless-function": 2,
+    "react/prop-types": [2, {
+      "ignore": ["children"]
+    }],
+    "react/self-closing-comp": 2,
+    "react/sort-prop-types": 1
   }
 }

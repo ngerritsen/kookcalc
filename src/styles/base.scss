@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'input';
 
 html {
   font-size: 62.5%;
@@ -8,6 +9,6 @@ body {
   margin: 0;
   font-size: 1.6rem;
   font-family: 'Source Sans Pro', Arial, sans-serif;
-  color: darken($color-white, 86%);
-  background-color: darken($color-white, 7%);
+  color: darken($color-white, 80%);
+  background-color: $color-cloud;
 }

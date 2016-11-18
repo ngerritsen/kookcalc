@@ -1,0 +1,26 @@
+@import 'variables';
+
+input,
+select {
+  height: $input-height;
+  line-height: $input-height;
+  border: 1px solid darken($color-cloud, 5%);
+  background-color: lighten($color-cloud, 5%);
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: none;
+  padding: 0 $spacing-small;
+  font-size: 1.5rem;
+  font-family: inherit;
+  min-width: 12rem;
+  width: 100%;
+
+  &:hover {
+    border: 1px solid darken($color-cloud, 15%);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-blue;
+  }
+}
