@@ -2,10 +2,9 @@
 @import 'mixins';
 
 .results {
-  background-color: darken($color-white, 3%);
-  border: 1px solid darken($color-white, 10%);
+  background-color: $color-white;
   padding: $spacing-medium;
-  margin: $spacing-small 0;
+  margin-bottom: $spacing-medium;
   position: relative;
   overflow: hidden;
 }
@@ -19,12 +18,12 @@
 .results__row,
 .results__cell {
   border-collapse: collapse;
-  border: 1px solid darken($color-white, 20%);
+  border: 1px solid darken($color-white, 17.5%);
   padding: $spacing-small;
 }
 
 .results__cell--heading {
-  font-weight: 700;
+  font-weight: bold;
   text-align: left;
 }
 
@@ -34,8 +33,7 @@
 
 @include from($size-small) {
   .results {
-    border-radius: 3px;
     padding: $spacing-small;
-    margin: $spacing-small;
+    margin: 0 $spacing-small $spacing-medium;
   }
 }
