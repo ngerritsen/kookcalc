@@ -1,14 +1,13 @@
 @import 'variables';
+@import 'mixins';
 
 .results {
-  background-color: darken($color-white, 2%);
+  background-color: darken($color-white, 3%);
   border: 1px solid darken($color-white, 10%);
-  border-radius: 3px;
-  padding: $spacing-small;
-  margin: $spacing-small;
+  padding: $spacing-medium;
+  margin: $spacing-small 0;
   position: relative;
   overflow: hidden;
-
 }
 
 .results__table {
@@ -31,4 +30,12 @@
 
 .results__cell--total {
   font-style: italic;
+}
+
+@include from($size-small) {
+  .results {
+    border-radius: 3px;
+    padding: $spacing-small;
+    margin: $spacing-small;
+  }
 }
