@@ -6,6 +6,7 @@ install:
 script:
 - npm run build
 after_success:
-    - "curl --ftp-create-dirs -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/"
-    - "curl --ftp-create-dirs -T main.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/"
-    - "curl --ftp-create-dirs -T style.css -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/nielsgerritsen/kookcalc/"
+    - "curl --ftp-create-dirs -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
+    - "curl --ftp-create-dirs -T main.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
+    - "curl --ftp-create-dirs -T vendor.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
+    - "curl --ftp-create-dirs -T style.css -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"

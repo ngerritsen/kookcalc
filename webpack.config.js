@@ -1,9 +1,18 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 const config = {
-  devtool: 'source-maps',
-  entry: './src/main.js',
+  entry: {
+    app: './src/main.js',
+    vendor: [
+      'react',
+      'react-dom',
+      'react-redux',
+      'redux'
+    ]
+  },
   output: {
     public: '.',
     path: '.',
@@ -13,19 +22,40 @@ const config = {
     loaders: [
       {
         test: /.js$/,
+        include: /src/,
         loader: 'babel'
       },
       {
         test: /.scss$/,
-        loader: 'style!css!sass'
+        loader: ExtractTextPlugin.extract('css!sass')
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Kookcalc',
+      filename: 'index.html',
+      template: './src/index.html',
+      inject: true,
+      hash: true
+    }),
+    new ExtractTextPlugin("style.css"),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(env)
+      }
+    })
+  ]
 };
 
+if (env === 'development') {
+  config.devtool = 'source-map'
+}
+
 if (env === 'production') {
-  delete config.devtool;
-  config.plugins = [new webpack.optimize.UglifyJsPlugin()];
+  config.plugins = [...config.plugins, new webpack.optimize.UglifyJsPlugin()];
 }
 
 module.exports = config;
