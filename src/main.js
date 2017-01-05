@@ -1,6 +1,5 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
-import { Provider } from 'react-redux';
+import Inferno from 'inferno';
+import { Provider } from 'inferno-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 
@@ -16,7 +15,7 @@ if (env !== 'production') {
 
 const store = createStore(reducer, applyMiddleware(...middlewares));
 
-ReactDOM.render(
+Inferno.render(
   <Provider store={store}>
     <App/>
   </Provider>,

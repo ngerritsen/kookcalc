@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import Inferno from 'inferno';
 
 import '../styles/add-food.scss';
 
@@ -14,7 +14,7 @@ function AddFood({ addFood, inputFoodName, foodNameInput, validFoodName }) {
         className="add-food__input"
         type="text"
         name="name"
-        onChange={e => inputFoodName(e.target.value)}
+        onInput={e => inputFoodName(e.target.value)}
         value={foodNameInput}
         placeholder="Food name"
       />
@@ -27,12 +27,5 @@ function AddFood({ addFood, inputFoodName, foodNameInput, validFoodName }) {
       })()}
   </form>;
 }
-
-AddFood.propTypes = {
-  addFood: PropTypes.func.isRequired,
-  foodNameInput: PropTypes.string.isRequired,
-  inputFoodName: PropTypes.func.isRequired,
-  validFoodName: PropTypes.bool.isRequired
-};
 
 export default AddFood;

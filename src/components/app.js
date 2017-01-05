@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
+import Inferno from 'inferno';
+import { connect } from 'inferno-redux';
 import { bindActionCreators } from 'redux';
 
 import Foods from './foods';
@@ -35,18 +35,6 @@ function App({
     <Results results={results} totalResults={totalResults}/>
   </div>;
 }
-
-App.propTypes = {
-  addFood: PropTypes.func.isRequired,
-  changePan: PropTypes.func.isRequired,
-  changeWeight: PropTypes.func.isRequired,
-  foodNameInput: PropTypes.string.isRequired,
-  foods: PropTypes.array.isRequired,
-  inputFoodName: PropTypes.func.isRequired,
-  results: PropTypes.array.isRequired,
-  totalResults: PropTypes.object.isRequired,
-  validFoodName: PropTypes.bool.isRequired
-};
 
 function mapStateToProps(state) {
   const results = calculateResults(state.foods);

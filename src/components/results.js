@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import Inferno from 'inferno';
 import '../styles/results.scss';
 
 function Results({ results, totalResults }) {
@@ -34,19 +34,5 @@ function Results({ results, totalResults }) {
     </table>
   </div>;
 }
-
-Results.propTypes = {
-  results: PropTypes.arrayOf(
-    PropTypes.shape({
-      food: PropTypes.string.isRequired,
-      perDay: PropTypes.number.isRequired,
-      perMeal: PropTypes.number.isRequired
-    })
-  ).isRequired,
-  totalResults: PropTypes.shape({
-    perDay: PropTypes.number.isRequired,
-    perMeal: PropTypes.number.isRequired
-  })
-};
 
 export default Results;

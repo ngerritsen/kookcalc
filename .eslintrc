@@ -1,9 +1,11 @@
 {
   "extends": [
     "ngerritsen",
-    "plugin:react/recommended"
+    "plugin:inferno/recommended"
   ],
-  "plugins": ["react"],
+  "plugins": [
+    "inferno"
+  ],
   "env": {
     "node": true,
     "browser": true
@@ -17,15 +19,13 @@
     }
   },
   "rules": {
-    "react/jsx-pascal-case": 2,
-    "react/jsx-indent-props": [2, 2],
-    "react/no-multi-comp": 2,
-    "react/prefer-es6-class": 2,
-    "react/prefer-stateless-function": 2,
-    "react/prop-types": [2, {
-      "ignore": ["children"]
-    }],
-    "react/self-closing-comp": 2,
-    "react/sort-prop-types": 1
+    "inferno/jsx-pascal-case": 2,
+    "inferno/jsx-indent-props": [2, 2],
+    "inferno/no-multi-comp": 2,
+    "inferno/prefer-es6-class": 2,
+    "inferno/prefer-stateless-function": 2,
+    "inferno/prop-types": 0,
+    "inferno/self-closing-comp": 2,
+    "inferno/sort-prop-types": 1
   }
 }

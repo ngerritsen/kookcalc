@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import Inferno from 'inferno';
 import Food from './food';
 import AddFood from './add-food';
 
@@ -21,15 +21,5 @@ function Foods({ addFood, changePan, changeWeight, foodNameInput, foods, inputFo
     </li>
   </ul>;
 }
-
-Foods.propTypes = {
-  addFood: PropTypes.func.isRequired,
-  changePan: PropTypes.func.isRequired,
-  changeWeight: PropTypes.func.isRequired,
-  foodNameInput: PropTypes.string.isRequired,
-  foods: PropTypes.array.isRequired,
-  inputFoodName: PropTypes.func.isRequired,
-  validFoodName: PropTypes.bool.isRequired
-};
 
 export default Foods;
