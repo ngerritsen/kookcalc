@@ -1,5 +1,5 @@
-import Inferno from 'inferno';
-import '../styles/results.scss';
+import Inferno from 'inferno'
+import '../styles/results.scss'
 
 function Results({ results, totalResults }) {
   return <div className="results">
@@ -32,7 +32,7 @@ function Results({ results, totalResults }) {
         </tr>
       </tfoot>
     </table>
-  </div>;
+  </div>
 }
 
-export default Results;
+export default Results

@@ -1,8 +1,9 @@
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { version } = require('./package.json')
 
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV
 const config = {
   entry: {
     app: './src/main.js',
@@ -38,7 +39,8 @@ const config = {
       favicon: './src/favicon.png',
       inject: true,
       hash: true,
-      cache: false
+      cache: false,
+      version
     }),
     new ExtractTextPlugin('style.css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -49,14 +51,14 @@ const config = {
       }
     })
   ]
-};
+}
 
 if (env === 'development') {
-  config.devtool = 'source-map';
+  config.devtool = 'source-map'
 }
 
 if (env === 'production') {
-  config.plugins = [...config.plugins, new webpack.optimize.UglifyJsPlugin()];
+  config.plugins = [...config.plugins, new webpack.optimize.UglifyJsPlugin()]
 }
 
-module.exports = config;
+module.exports = config

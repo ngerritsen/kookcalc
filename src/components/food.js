@@ -1,7 +1,7 @@
-import Inferno from 'inferno';
-import { pans } from '../constants';
+import Inferno from 'inferno'
+import { pans } from '../constants'
 
-import '../styles/food.scss';
+import '../styles/food.scss'
 
 function Food({ food, changeWeight, changePan }) {
   return <form className="food">
@@ -28,7 +28,7 @@ function Food({ food, changeWeight, changePan }) {
         )}
       </select>
     </div>
-  </form>;
+  </form>
 }
 
-export default Food;
+export default Food

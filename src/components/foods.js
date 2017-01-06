@@ -1,8 +1,8 @@
-import Inferno from 'inferno';
-import Food from './food';
-import AddFood from './add-food';
+import Inferno from 'inferno'
+import Food from './food'
+import AddFood from './add-food'
 
-import '../styles/foods.scss';
+import '../styles/foods.scss'
 
 function Foods({ addFood, changePan, changeWeight, foodNameInput, foods, inputFoodName, validFoodName }) {
   return <ul className="foods">
@@ -19,7 +19,7 @@ function Foods({ addFood, changePan, changeWeight, foodNameInput, foods, inputFo
         validFoodName={validFoodName}
       />
     </li>
-  </ul>;
+  </ul>
 }
 
-export default Foods;
+export default Foods

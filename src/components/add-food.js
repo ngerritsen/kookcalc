@@ -1,13 +1,13 @@
-import Inferno from 'inferno';
+import Inferno from 'inferno'
 
-import '../styles/add-food.scss';
+import '../styles/add-food.scss'
 
 function AddFood({ addFood, inputFoodName, foodNameInput, validFoodName }) {
   return <form className="add-food" onSubmit={e => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (validFoodName) {
-      addFood();
+      addFood()
     }
   }}>
       <input
@@ -20,12 +20,12 @@ function AddFood({ addFood, inputFoodName, foodNameInput, validFoodName }) {
       />
       {(() => {
         if (validFoodName) {
-          return <button type="submit" className="add-food__button">Add</button>;
+          return <button type="submit" className="add-food__button">Add</button>
         }
 
-        return <button type="button" className="add-food__button add-food__button--disabled">Add</button>;
+        return <button type="button" className="add-food__button add-food__button--disabled">Add</button>
       })()}
-  </form>;
+  </form>
 }
 
-export default AddFood;
+export default AddFood
