@@ -37,6 +37,7 @@ const config = {
       filename: 'index.html',
       template: './src/index.html',
       favicon: './src/favicon.png',
+      manifest: '/manifest.json',
       inject: true,
       hash: true,
       cache: false,
