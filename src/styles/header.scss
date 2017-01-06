@@ -1,15 +1,14 @@
 @import 'variables';
 @import 'mixins';
 
-$header-height: 6rem;
+$header-height: 5.6rem;
 
 .header {
   height: $header-height;
   padding: 0 $spacing-medium;
   margin-bottom: $spacing-small;
-  color: $color-midnight;
-  background-color: $color-white;
-  border-bottom: 1px solid darken($color-cloud, 10%);
+  color: $color-white;
+  background: $color-purple linear-gradient(45deg, $color-purple, $color-pink);
 }
 
 .header__title {
