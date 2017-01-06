@@ -3,12 +3,14 @@
   "name": "Kookcalc",
   "description": "Food weight calculator",
   "background_color": "#ecf0f1",
+  "theme_color": "#bd1d9a",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "homescreen-4x.png",
-      "sizes": "192x192",
+      "src": "logo.png",
+      "sizes": "256x256",
       "type": "image/png"
     }
   ]
