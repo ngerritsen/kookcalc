@@ -7,7 +7,7 @@ const CASSEROLE_WEIGHT = 625
 const SMALL_WEIGHT = 830
 const MEDIUM_WEIGHT = 625
 const LARGE_WEIGHT = 1072
-const HANDLE_WEIGHT = 1430
+const HANDLE_WEIGHT = 50
 
 export const pans = [
   { name: 'Casserole', weight: CASSEROLE_WEIGHT },
