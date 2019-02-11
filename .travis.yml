@@ -1,15 +1,11 @@
 language: node_js
 node_js:
-  - '6'
+  - '8'
 install:
   - npm install
 script:
   - npm test
   - npm run build
 after_success:
-    - "curl --ftp-create-dirs -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
-    - "curl --ftp-create-dirs -T main.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
-    - "curl --ftp-create-dirs -T vendor.js -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
-    - "curl --ftp-create-dirs -T style.css -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
-    - "curl --ftp-create-dirs -T logo.png -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
-    - "curl --ftp-create-dirs -T manifest.json -u $FTP_USER:$FTP_PASSWORD ftp://carehr.nl/public_html/kookcalc/"
+  - zip ../kookcalc.zip index.html main.js vendor.js style.css logo.png manifest.json
+  - "curl -F 'data=@kookcalc.zip' -H 'X-Key: '$DEPLOY_KEY -H 'X-ExtractTo: kookcalc' https://carehr.nl/deploy/"
