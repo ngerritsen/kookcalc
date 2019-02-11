@@ -7,5 +7,5 @@ script:
   - npm test
   - npm run build
 after_success:
-  - zip ../kookcalc.zip index.html main.js vendor.js style.css logo.png manifest.json
+  - zip kookcalc.zip index.html main.js vendor.js style.css logo.png manifest.json
   - "curl -F 'data=@kookcalc.zip' -H 'X-Key: '$DEPLOY_KEY -H 'X-ExtractTo: kookcalc' https://carehr.nl/deploy/"
